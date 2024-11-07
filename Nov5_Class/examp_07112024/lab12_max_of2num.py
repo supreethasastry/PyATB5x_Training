@@ -1,0 +1,6 @@
+res=max(13,10,18,999,1010)
+print(res)
+print("max: " + str(res))
+min=min(3,-1,2,0,-32,-40)
+print("minimum:" + str(min))
+print(min)
