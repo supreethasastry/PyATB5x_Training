@@ -10,5 +10,3 @@ print("Subtraction: " , str(sub))
 print("Multiplication: " , str(mul))
 print("Division: " , str(div))
 
-#/num1=int(input("First number: "))
-#/the answer of div will always be float by default
