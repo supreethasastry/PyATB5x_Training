@@ -1,5 +1,5 @@
-#/Output of below code -'a' is not defined
-
+#/Output of below code
+a=9
 print(type(a))
 
 if a == 10:
