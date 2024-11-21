@@ -8,3 +8,5 @@ for i in range(1,101):
         print("Fizz")
     else:
         print(i)
+#/multiple conditions check should always come first
+#/conditions should be narrowed down from multiple to single based on logic
