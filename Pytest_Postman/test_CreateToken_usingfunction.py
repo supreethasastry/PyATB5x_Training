@@ -46,6 +46,40 @@ def test_putrequest():
     bookingid=get_bookingid()
     print(token)
     print(bookingid)
-    base_path="/booking"+str(bookingid)
-    full_url=base_url+base_path
-    cookie="token"+token
+    base_path="/booking/"+str(bookingid)
+    full_url_path=base_url+base_path
+    cookie="token="+token
+    headers1 ={
+        "Content-Type": "application/json",
+        "Cookie" : cookie
+    }
+    json_payload= {
+        "firstname": "Sup",
+        "lastname": "Smart",
+        "totalprice": 111,
+        "depositpaid": True,
+        "bookingdates": {
+            "checkin": "2018-01-01",
+            "checkout": "2019-01-01"
+        },
+        "additionalneeds": "Breakfast"
+    }
+    response=requests.put(url=full_url_path,headers=headers1,json=json_payload)
+    assert response.status_code==200
+    assert response.json()["lastname"]=="Smart"
+    print(response.json()["lastname"])
+
+
+def test_delete():
+    URL="https://restful-booker.herokuapp.com/booking/"
+    booking_id=get_bookingid()
+    Delete_url=URL + str(booking_id)
+    cookie_value="token=" + create_token()
+    headers1 = {
+        "Content-Type": "application/json",
+        "Cookie": cookie_value
+    }
+    response=requests.delete(url=Delete_url, headers=headers1)
+    assert response.status_code==201
+
+
