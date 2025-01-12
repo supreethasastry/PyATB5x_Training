@@ -4,7 +4,7 @@ import allure
 import pytest
 
 @allure.title("Sample Selenium Prg")
-@pytest.mark.regression
+
 def test_vwo_login():
     driver=webdriver.Chrome() #/instance of browser
     driver.get("https://app.vwo.com") #/API request
