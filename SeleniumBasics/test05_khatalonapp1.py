@@ -14,4 +14,5 @@ def test_khatalon_chrome():
         make_appointement.click()
         time.sleep(5)
         assert driver.current_url == "https://katalon-demo-cura.herokuapp.com/profile.php#login"
+        #Comment
 

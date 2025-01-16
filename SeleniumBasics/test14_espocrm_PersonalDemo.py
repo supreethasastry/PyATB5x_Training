@@ -15,4 +15,6 @@ def test_espocrm_personaldemo():
     login.click()
     time.sleep(5)
     assert driver.current_url=="https://www.espocrm.com/cloud-registration/?plan=demo"
-    print(driver.window_handles)
+    #print(driver.window_handles)
+
+    # comment

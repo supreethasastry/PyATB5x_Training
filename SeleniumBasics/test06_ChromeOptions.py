@@ -15,6 +15,7 @@ def test_katalon_chrome():
     # chrome_options.add_argument("--start-maximized")
     # chrome_options.add_argument("--window-size=900,600")
     chrome_options.add_argument("--headless")
+    # Comment
 
 
 
