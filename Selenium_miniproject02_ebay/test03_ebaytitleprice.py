@@ -47,3 +47,4 @@ def test_Get_title_price():
         print(f" item-{i} price:{web_element_price.text}")
     time.sleep(30)
     driver.close()
+    # comment

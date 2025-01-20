@@ -24,3 +24,4 @@ def test_ebaySearch():
     print(total)
     for p in macmini_price:
         print('Price:', p.text)
+        #comment
