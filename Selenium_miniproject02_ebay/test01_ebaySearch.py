@@ -17,11 +17,12 @@ def test_ebaySearch():
     macmini_title=driver.find_elements(By.XPATH," //div[@class ='s-item__title']")
     total_items=len(macmini_title)
     print(total_items)
-    for t in macmini_title:
-      print('title:', t.text)
     macmini_price = driver.find_elements(By.XPATH, "//span[@class ='s-item__price']")
+    for t,p in zip(macmini_title,macmini_price):
+      print('title:', t.text)
+      print('Price:', p.text)
     total = len(macmini_price)
     print(total)
-    for p in macmini_price:
-        print('Price:', p.text)
+
+
         #comment
